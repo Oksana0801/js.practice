@@ -1,26 +1,4 @@
-#test {
-    height: 20px;
-    width: 20px;
-    background: greenyellow;
+#a1, #a2 {
+    visibility: hidden;
 }
 
-#block {
-    width: 200px;
-    height: 100px;
-    background: dodgerblue;
-}
-
-.menu-item {
-    border: 2px solid #66CDAA;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-}
-.menu-item .submenu {
-    height: 40px;
-    width: 120px;
-    background: green;
-    position: absolute;
-    cursor: pointer;
-    display: none;
-}

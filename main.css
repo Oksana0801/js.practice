@@ -2,3 +2,18 @@
     visibility: hidden;
 }
 
+#rect {
+    width: 100px;
+    height: 50px;
+    background: red;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+
+}

@@ -109,3 +109,20 @@ function foo2() {
 }
 
 //foo();
+
+function showRect() {
+    document.write(`<div id="rect"> </div>`);
+}
+
+//showRect();
+function createRGB(){
+    return `rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)})`;
+}
+function showCircles(r){
+        let str = `<div style="width: ${r*2}px; height: ${r*2}px; border-radius: 100%; background: ${createRGB()}"> </div>`;
+        document.write(str);
+}
+
+for(let i = 50; i < 150; i++){
+    showCircles(i);
+}

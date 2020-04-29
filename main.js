@@ -56,73 +56,156 @@
 // }
 //
 // foo(2.3, 5);
-
-function oddNumbers(a, b) {
-    for (let i = a; i <=b; i++){
-        if (i%2 !== 0){
-            console.log(i);
-        }
-    }
-}
-//oddNumbers(2,6);
-
-function dividedBy3(a, b) {
-    for (let i = a; i <=b; i++){
-        if (i%3 == 0){
-            console.log(i);
-        }
-    }
-}
-//dividedBy3(2,6);
-
-function fbn(a, b){
-    let f = 0,
-        f1 = 1,
-        f2 = 2;
-   for(let i = 0; i <= b; i++){
-       f = f1 + f2;
-       f1 = f2;
-       f2 = f;
-       if( f >= a && f <= b){
-           console.log(f)
-       }
-   }
-}
-//fbn(5,39);
-
-// function simple(a, b){
-//     for(let i = a; i <= b; i++){
-//         if( i > 2 && i % 2 == 0 ) continue;
 //
+// function oddNumbers(a, b) {
+//     for (let i = a; i <=b; i++){
+//         if (i%2 !== 0){
+//             console.log(i);
+//         }
 //     }
 // }
+// //oddNumbers(2,6);
 //
-// simple(2,10);
-
-function foo() {
-    console.log("вызвана функция foo");
-    foo2();
-}
-
-function foo2() {
-    console.log('вызвана функция foo2');
-}
-
-//foo();
-
-function showRect() {
-    document.write(`<div id="rect"> </div>`);
-}
+// function dividedBy3(a, b) {
+//     for (let i = a; i <=b; i++){
+//         if (i%3 == 0){
+//             console.log(i);
+//         }
+//     }
+// }
+// //dividedBy3(2,6);
+//
+// function fbn(a, b){
+//     let f = 0,
+//         f1 = 1,
+//         f2 = 2;
+//    for(let i = 0; i <= b; i++){
+//        f = f1 + f2;
+//        f1 = f2;
+//        f2 = f;
+//        if( f >= a && f <= b){
+//            console.log(f)
+//        }
+//    }
+// }
+// //fbn(5,39);
+//
+// // function simple(a, b){
+// //     for(let i = a; i <= b; i++){
+// //         if( i > 2 && i % 2 == 0 ) continue;
+// //
+// //     }
+// // }
+// //
+// // simple(2,10);
+//
+// function foo() {
+//     console.log("вызвана функция foo");
+//     foo2();
+// }
+//
+// function foo2() {
+//     console.log('вызвана функция foo2');
+// }
+//
+// //foo();
+//
+// function showRect() {
+//     document.write(`<div id="rect"> </div>`);
+// }
 
 //showRect();
 function createRGB(){
     return `rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)})`;
 }
-function showCircles(r){
-        let str = `<div style="width: ${r*2}px; height: ${r*2}px; border-radius: 100%; background: ${createRGB()}"> </div>`;
-        document.write(str);
+// function showCircles(r){
+//         let str = `<div style="width: ${r*2}px; height: ${r*2}px; border-radius: 100%; background: ${createRGB()}"> </div>`;
+//         document.write(str);
+// }
+//
+// for(let i = 50; i < 150; i++){
+//     showCircles(i);
+// }
+//
+// function rects(w, h, c){
+//     let rect = `<div style="width:${w}px; height:${h}px; background: ${c}"></div>`;
+//     document.write(rect);
+// }
+// ====================    OBJECT
+// const kesha = {
+//      name : 'Кеша',
+//     voice : function () {
+//         console.log(`My name is ${this.name}`);
+//     },
+//     setAge : function (age) {
+//          this.myAge = age;
+//     },
+//
+//     howOldAreYou : function () {
+//     console.log(`I'm ${this.myAge} years old`);
+//     }
+// };
+// kesha.voice();
+// kesha.setAge(6);
+// kesha.howOldAreYou();
+
+// let arrNum = [];
+// for(let i = 50; i <= 150; i++){
+//     if(i % 2 !== 0){
+//         arrNum.push(i);
+//     }
+// }
+// //console.log(arrNum);
+// function isPolindrom(num){
+//     if(num === Number(num.toString().split("").reverse().join(""))){
+//         return true;
+//     }
+//     return false;
+// }
+//
+// let arrPLD = [];
+// for(let i = 1; i <= 1001; i++){
+//    if(isPolindrom(i)){
+//        arrPLD.push(i);
+//    }
+// }
+// console.log(arrPLD);
+
+// function Bird (n){
+//     this.name = n;
+// }
+//
+// let kesha = new Bird('Кеша');
+//
+// console.log(kesha);
+
+function Rectagle(w, h) {
+    this.width = w;
+    this.height = h;
+    this.color = createRGB();
+    this.show = function() {
+        document.write(`<div style = 'width : ${this.width}px; \
+                                      height : ${this.height}px; \ 
+                                      background : ${this.color}'></div> \
+                                      <br/>`)
+    }
 }
 
-for(let i = 50; i < 150; i++){
-    showCircles(i);
+let blueRec = new Rectagle(150, 100, 'blue');
+let redRec = new Rectagle(100, 50, 'red')
+
+blueRec.show();
+redRec.show();
+
+function range(n){
+    let array = [];
+    for(let i = 0; i < n; i++){
+        array.push(i);
+    }
+    return array;
 }
+
+range(20).map(function () {
+    let box = new Rectagle(100, 50);
+    box.show();
+})

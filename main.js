@@ -115,9 +115,9 @@
 // }
 
 //showRect();
-function createRGB(){
-    return `rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)})`;
-}
+// function createRGB(){
+//     return `rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)})`;
+// }
 // function showCircles(r){
 //         let str = `<div style="width: ${r*2}px; height: ${r*2}px; border-radius: 100%; background: ${createRGB()}"> </div>`;
 //         document.write(str);
@@ -178,34 +178,68 @@ function createRGB(){
 // let kesha = new Bird('Кеша');
 //
 // console.log(kesha);
+//
+// function Rectagle(w, h) {
+//     this.width = w;
+//     this.height = h;
+//     this.color = createRGB();
+//     this.show = function() {
+//         document.write(`<div style = 'width : ${this.width}px; \
+//                                       height : ${this.height}px; \
+//                                       background : ${this.color}'></div> \
+//                                       <br/>`)
+//     }
+// }
+//
+// let blueRec = new Rectagle(150, 100, 'blue');
+// let redRec = new Rectagle(100, 50, 'red')
+//
+// blueRec.show();
+// redRec.show();
+//
+// function range(n){
+//     let array = [];
+//     for(let i = 0; i < n; i++){
+//         array.push(i);
+//     }
+//     return array;
+// }
+//
+// range(20).map(function () {
+//     let box = new Rectagle(100, 50);
+//     box.show();
+// })
 
-function Rectagle(w, h) {
-    this.width = w;
-    this.height = h;
-    this.color = createRGB();
-    this.show = function() {
-        document.write(`<div style = 'width : ${this.width}px; \
-                                      height : ${this.height}px; \ 
-                                      background : ${this.color}'></div> \
-                                      <br/>`)
-    }
-}
-
-let blueRec = new Rectagle(150, 100, 'blue');
-let redRec = new Rectagle(100, 50, 'red')
-
-blueRec.show();
-redRec.show();
-
-function range(n){
-    let array = [];
-    for(let i = 0; i < n; i++){
-        array.push(i);
-    }
-    return array;
-}
-
-range(20).map(function () {
-    let box = new Rectagle(100, 50);
-    box.show();
-})
+// =================================================== LESSON 3 =====================================================
+// наследование и проттотипы
+// function Bird (){
+//     this.whatIsYourName = function (){
+//         console.log(`My name is ${this.name}`);
+//     }
+// }
+// Bird.prototype.setName = function (n) {
+//     this.name = n;
+// }
+//
+// function Parrot (){
+//     this.canSpeak = true;
+// }
+// Parrot.prototype = new Bird();
+//
+// let kesha = new Parrot();
+// kesha.setName('Кеша');
+// kesha.whatIsYourName();
+// console.log(kesha);
+//
+// class Bird {
+//     constructor(n) {
+//         this.voice = n;
+//     }
+//     howYouSpeak(){
+//         console.log(`I speak ${this.voice}`);
+//     }
+// }
+//
+// let kesha = new Bird('Chik-chirik');
+// kesha.howYouSpeak();
+// console.log(kesha);

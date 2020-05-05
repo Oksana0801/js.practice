@@ -243,3 +243,137 @@
 // let kesha = new Bird('Chik-chirik');
 // kesha.howYouSpeak();
 // console.log(kesha);
+//
+// var a = 10;
+//
+// function testFn() {
+//     console.log(a);
+// }
+//
+// (function (func) {
+//     var a = 20;
+//     func();
+// })(testFn);
+// const obj = {
+//     a: {
+//         b: {
+//             c: 'd'
+//         },
+//         e: 'f'
+//     }
+// };
+//
+// ///get(obj, 'a.b');   // { c : 'd' }
+// console.log(get(obj, 'a.b.c')); // 'd'
+// //get(obj, 'a.e');   // 'f'
+//
+// function get(object, path) {
+//     let result;
+//     let arrPath = path.split('.'); // [a,b]
+//     arrPath.forEach(function(val){
+//         if(object[val]){
+//             result = object[val];
+//         } else {
+//             result = result[val];
+//         }
+//         //result - { b: { c: 'd'} e: 'f'}
+//     })
+//     return result;
+// }
+//
+// const obj = {
+//     a: {
+//         b: {
+//             c: 'd'
+//         },
+//         e: 'f'
+//     }
+// };
+//
+//
+// function get(obj, path) {
+//     let result;
+//     let arrPath = path.split('.'); // [a,b]
+//
+//     arrPath.forEach(function(val){
+//         if(obj[val]){
+//             result = obj[val];
+//         } else {
+//             result = result[val];
+//         }
+//     })
+//
+//     return result;
+// }
+//
+// console.log(get(obj, 'a.b.c')); // 'd'
+//
+//===================== 1
+// calc('(+ 1 2 3)');
+// //calc('(- (+ 2 3) 5)');
+//
+// function calc(val){
+//     let sum = 0;
+// }
+//===================== 2 +
+// const a = [ 1, 2, 4, 7, 11, 19 ]
+// const b = [ 2, 7]
+//
+// function findEqualElements(arr1, arr2) {
+//     let result = [];
+//     arr1.forEach(function (item) {
+//         if(arr2.includes(item)){
+//             result.push(item);
+//         } else {
+//             result = 'Совпадений нет'ж
+//         }
+//     })
+//     return result;
+// }
+//
+// console.log(findEqualElements(a, b));
+//====================== 3
+
+
+const model = {};
+
+model.data = [
+    {
+        id: 0,
+        name: 'Все регионы'
+    },
+    {
+        id: 67,
+        name: 'Алтайский край',
+        chld: [
+            {
+                id: 32,
+                name: 'Алейск',
+            },
+            {
+                id: 89,
+                name: 'Барнаул'
+            },
+        ],
+    },
+];
+
+model.getNameById = function (id) {
+    let result;
+    this.data.forEach(function (item) {
+        if(item.id === id){
+            result = item.name;
+        } else if (item['chld']){
+            item['chld'].forEach(function (val) {
+                if(val.id == id){
+                    result = val.name;
+                }
+            })
+        }
+    })
+    return result;
+};
+
+console.log(model.getNameById(0)); // 'Все регионы'
+//model.getNameById(67) // 'Алтайский край'
+//model.getNameById(89) // 'Барнаул'

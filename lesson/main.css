@@ -1,0 +1,24 @@
+#one {
+    width: 150px;
+    min-height: 150px;
+    background-color: aqua;
+}
+
+#two {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+
+#tr {
+    width: 0px;
+    height: 0px;
+    border: 50px dashed brown;
+    border-right: 50px solid green;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}

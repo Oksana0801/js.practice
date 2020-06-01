@@ -1,0 +1,27 @@
+#abc-button {
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    line-height: 120px;
+    border: 1px solid lightseagreen;
+    border-radius: 4px;
+    background: linear-gradient(white, lightgrey);
+    text-align: center;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#abc-button:hover {
+    background: linear-gradient(white, darkgray);
+}
+
+#abc-button:active {
+    background: linear-gradient(darkgray, white);
+}
+
+#abc-button::selection{
+    background: transparent;
+}

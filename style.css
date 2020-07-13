@@ -1,32 +1,3 @@
-.container {
-    width: 650px;
-    min-height: 400px;
-    background: darkgray;
-    margin: 100px auto;
-    text-align: center;
-}
-
-.myImage {
-    width: 200px;
-    height: auto;
-    vertical-align: top;
-    margin: 5px;
-    border: 2px solid black;
-    cursor: pointer;
-}
-
-.myImage:hover {
-    border-color: white;
-    transition: border-color .2s linear;
-}
-
-#blackpanel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    width: 100%;
+p {
+    color: orangered;
 }
